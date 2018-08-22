@@ -1,42 +1,32 @@
-basketball = { color: "orange", shape: "sphere", use: "dribbling"}
-soccerball = { :color => "checkered", :shape => "small sphere", :use => "kicking"}
-football = { color: "brown", shape: "oblong", use: "catching"}
-
 class Store
+  attr_reader :color, :shape, :use      # same as def first_name, @first_name, end
+  attr_writer :color, :shape, :use
 
-  def initialize(color, shape, use)
-    @color = color
-    @shape = shape
-    @use = use
-  end
 
-  def color
-    @color
-  end
-
-  def shape
-    @shape
-  end
-
-  def use
-    @use
-  end
-
-  def color=(new_value)
-    @color = new_value
-  end
-
-  def shape=(new_value)
-    @shape = new_value
-  end
-
-  def use=(new_value)
-    @use = new_value
+  def initialize(input_options)
+    @color = input_options[:color]
+    @shape = input_options[:shape]
+    @use = input_options[:use]
   end
 
 end
 
-item_1 = Store.new("orange", "sphere", "dribbling")
+basketball = Store.new(
+                       color: "orange", 
+                       shape: "sphere", 
+                       use: "dribbling"
+                       )
+soccer_ball = Store.new(
+                        color: "checkered", 
+                        shape: "small sphere", 
+                        use: "kicking"
+                        )
+football = Store.new(
+                     color: "brown", 
+                     shape: "oblong", 
+                     use: "catching"
+                     )
 
-p item_1.color
-
+puts basketball.color
+puts soccer_ball.shape
+puts football.use
