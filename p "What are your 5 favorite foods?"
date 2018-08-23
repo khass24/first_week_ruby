@@ -1,0 +1,6 @@
+p "What are your 5 favorite foods?"
+
+favorite_foods = gets.chomp
+
+p favorite_foods
+

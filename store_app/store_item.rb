@@ -1,4 +1,6 @@
-class Store
+module
+
+class Ball
   attr_reader :color, :shape, :use      # same as def first_name, @first_name, end
   attr_writer :color, :shape, :use
 
@@ -8,7 +10,16 @@ class Store
     @shape = input_options[:shape]
     @use = input_options[:use]
   end
+end
 
+class Basketball
+
+end
+
+class SoccerBall
+end
+
+class Football
 end
 
 basketball = Store.new(
